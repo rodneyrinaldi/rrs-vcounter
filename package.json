@@ -1,5 +1,5 @@
 {
-  "name": "xxx",
+  "name": "visitor-counter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "mongodb": "^4.1.0",
     "next": "11.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "swr": "^0.5.6"
+    "react-dom": "17.0.2"
   },
   "devDependencies": {
     "eslint": "7.32.0",
