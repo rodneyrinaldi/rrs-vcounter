@@ -7,12 +7,14 @@ import styles from '../styles/index.module.css'
 export default function Home({ sequence }) {
   const router = useRouter()
   const { service } = router.query
+
   const number = sequence.toString().padStart(6, "0")
   const counter = [number.slice(0, 3), '.', number.slice(3)].join('')
 
   return (
     <div className={styles.container}>
       <Head>
+        <title></title>
         <meta name="description" content="Visitor Counter" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -25,13 +27,19 @@ export default function Home({ sequence }) {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const { service } = context.query
+  console.log(service)
+
+  const serviceName = 'oab-rodneyrinaldi'
   const { db, client } = await connectToDatabase()
-  const data = await db.collection('visitorcounter-col').findOneAndUpdate(
-    { service: "xxx" },
-    { $inc: { sequence: 1 } }
-  )
-  const { sequence } = await db.collection('visitorcounter-col').findOne({ 'service': 'xxx' })
+  const data = await db.collection('visitorcounter-col')
+    .findOneAndUpdate(
+      { service: serviceName },
+      { $inc: { sequence: 1 } }
+    )
+  const { sequence } = await db.collection('visitorcounter-col')
+    .findOne({ 'service': serviceName })
 
   return {
     props: {
