@@ -6,6 +6,14 @@
   align-items: center;
 }
 
+.containerPage {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .main {
   flex: 1;
   display: flex;
@@ -16,6 +24,11 @@
 
 .title {
   font-size: 2rem;
+  text-align: center;
+}
+
+.line {
+  font-size: 1.3rem;
   text-align: center;
 }
 

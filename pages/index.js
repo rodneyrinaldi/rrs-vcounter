@@ -29,9 +29,9 @@ export default function Home({ sequence }) {
 
 export async function getServerSideProps(context) {
   const { service } = context.query
-  console.log(service)
 
   const serviceName = 'oab-rodneyrinaldi'
+
   const { db, client } = await connectToDatabase()
   const data = await db.collection('visitorcounter-col')
     .findOneAndUpdate(
