@@ -1,5 +1,5 @@
 {
-  "name": "visitor-counter",
+  "name": "vcounter",
   "version": "0.1.0",
   "private": true,
   "scripts": {

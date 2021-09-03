@@ -10,7 +10,7 @@ export default function Home() {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>vcounter.rrs.net.br</title>
-        <meta name="description" content="rodneyrinaldi services" />
+        <meta name="description" content="rodneyrinaldi visitor counter services" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
