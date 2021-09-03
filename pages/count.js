@@ -14,9 +14,11 @@ export default function Home({ sequence }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title></title>
-        <meta name="description" content="Visitor Counter" />
-        <link rel="icon" href="/favicon.ico" />
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>rrs.net.br</title>
+        <meta name="description" content="rodneyrinaldi services" />
+        <link rel="icon" href="/favicon.ico" />/>
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>
